@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Cutive&display=swap');
+/* font-family: 'Cutive', serif; */
+
+body {
+    background-color: #012b31;
+    color: #FCFCD4;
+    font-family: 'Cutive', serif;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1.5;
+    padding: 3vh 5vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.top,
+.middle,
+.indicators {
+    text-align: center;
+    position: relative;
+}
+
+input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #FCFCD4;
+    padding-bottom: 10px;
+    font-size: 26px;
+    font-family: 'Cutive', serif;
+    color: #FCFCD4;
+}
+
+.search-input::placeholder {
+    color: #464634;
+}
+
+.search-clear,
+.spinner {
+    opacity: 0;
+
+    /* when they are not hidden the mouse cannot interact with them */
+    pointer-events: none;
+
+    transition: opacity 0.5s fade-in;
+}
+
+.search-clear {
+    cursor: pointer;
+}
