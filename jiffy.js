@@ -11,6 +11,17 @@ fetch("https://api.giphy.com/v1/gifs/search?api_key=Jar9pAn2Ia0OVPjpsRuwSB3pQUXi
     // here we look beside of the first result and grab the original mp4 source
     const src = gif.images.original.mp4
     console.log(src)
+
+    const video = document.createElement("video")
+    // here we can set attributes on our created element using the . notation 
+    video.src = src
+    video.autoplay = true
+    video.loop = true
+
+    // we grab our videos element and then append our newly created video to it
+    const videos = document.querySelector(".videos")
+    videosEl.appendChild("video")
+
     }) 
     .catch(error => {
     // lastly we can use .catch() to do something in case our fetch fails
